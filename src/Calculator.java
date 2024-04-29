@@ -8,6 +8,14 @@ public class Calculator {
         this.list = list;
     }
 
+    public void setList(int calculatedResult) {
+        this.list.add(calculatedResult);
+    }
+
+    public ArrayList<Integer> getList() {
+        return this.list;
+    }
+
     public int calculate(char sign, int num1, int num2) throws CalculaotrException {
 
         int result = 0;

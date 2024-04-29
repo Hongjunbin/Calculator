@@ -19,11 +19,13 @@ public class App {
             char operator = sc.next().charAt(0);
             sc.nextLine();
             try {
-                int result = c.calculate(operator, num1, num2);
-                System.out.println(result);
+                // 계산된 값 setter주입 메서드 안에서 직접 add메서드 호출 후 주입.
+                c.setList(c.calculate(operator, num1, num2));
             } catch(CalculaotrException e) {
                 System.out.println(e.getMessage());
             }
+
+            System.out.println(c.getList());
 
             System.out.println("더 계산하시겠습니까? (exit 입력 시 종료)");
 
