@@ -50,6 +50,14 @@ public class App {
                     System.out.print("[" + item + "] ");
                 }
             }
+            System.out.println();
+            System.out.println("저장된 연산결과를 조회하시겠습니까? (inquiry 입력 시 조회)");
+            if(sc.nextLine().equals("inquiry")) {
+                for(int item : list) {
+                    System.out.print("[" + item + "] ");
+                }
+            }
+            System.out.println();
             System.out.println("더 계산하시겠습니까? (exit입력 시 종료)");
             turnOnOff = !sc.nextLine().equals("exit");
         }
