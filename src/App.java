@@ -14,5 +14,21 @@ public class App {
         System.out.print("사칙연산 기호를 입력하세요: ");
         String sign = sc.nextLine();
         System.out.println(sign.charAt(0));
+
+        int result = 0;
+        if(sign.equals("+")){
+            result = number1 + number2;
+        } else if(sign.equals("-")) {
+            result = number1 - number2;
+        } else if(sign.equals("*")) {
+            result = number1 * number2;
+        } else if(sign.equals("/")) {
+            if(number2 != 0) {
+                result = number1 / number2;
+            } else {
+                System.out.println("나눗셈 연산에서 분모(두번째 정수)에 0이 입력될 수 없습니다.");
+            }
+        }
+        System.out.println("결과 : " + result);
     }
 }
