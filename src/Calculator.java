@@ -16,6 +16,10 @@ public class Calculator {
         return this.list;
     }
 
+    public void removeResult() {
+        this.list.remove(0);
+    }
+
     public int calculate(char sign, int num1, int num2) throws CalculaotrException {
 
         int result = 0;
