@@ -25,10 +25,10 @@ public class Calculator {
             case '-' : result = num1 - num2; break;
             case '*' : result = num1 * num2; break;
             case '/' : if(num2 == 0) {
-                            throw new CalculaotrException("0을 나눌순 없습니다.");
-                        } else {
-                            result = num1 / num2;
-                        } break;
+                throw new CalculaotrException("0을 나눌순 없습니다.");
+            } else {
+                result = num1 / num2;
+            } break;
             default : throw new CalculaotrException("잘못된 기호가 들어왔습니다.");
         }
         return result;
