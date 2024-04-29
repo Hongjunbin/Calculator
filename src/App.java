@@ -3,6 +3,9 @@ import java.util.Scanner;
 public class App {
     public static void main(String[] args) {
 
+        int[] resultArr = new int[10];
+        int count = 0;
+
         Scanner sc = new Scanner(System.in);
 
         boolean turnOnOff = true;
@@ -32,6 +35,13 @@ public class App {
                 }
             }
             System.out.println("결과 : " + result);
+
+            resultArr[count] = result;
+            count++;
+
+            for(int item : resultArr){
+                System.out.print("["+item+"]");
+            }
 
             System.out.println("더 계산하시겠습니까? (exit입력 시 종료)");
             turnOnOff = !sc.nextLine().equals("exit");
