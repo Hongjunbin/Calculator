@@ -15,14 +15,19 @@ public class Calculator {
 
         int result = 0;
 
+        AddOperator addOperator = new AddOperator();
+        SubtractOperator subtractOperator = new SubtractOperator();
+        MultiplyOperator multiplyOperator = new MultiplyOperator();
+        DivideOperator divideOperator = new DivideOperator();
+
         switch(sign) {
-            case '+' : result = num1 + num2; break;
-            case '-' : result = num1 - num2; break;
-            case '*' : result = num1 * num2; break;
+            case '+' : result = addOperator.operator(num1, num2); break;
+            case '-' : result = subtractOperator.operator(num1, num2); break;
+            case '*' : result = multiplyOperator.operator(num1, num2); break;
             case '/' : if(num2 == 0) {
                 throw new CalculaotrException("0을 나눌순 없습니다.");
             } else {
-                result = num1 / num2;
+                result = divideOperator.operator(num1, num2);
             } break;
             default : throw new CalculaotrException("잘못된 기호가 들어왔습니다.");
         }
